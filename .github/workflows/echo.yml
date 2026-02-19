@@ -1,0 +1,9 @@
+name: Echo
+on: repository_dispatch
+
+jobs:
+  echo:
+    runs-on: ubuntu-latest
+    steps:
+      - run: "echo 'event type: ${{ github.event.action }}'"
+      - run: "echo 'payload: ${{ toJson(github.event.client_payload) }}'"

@@ -1,0 +1,21 @@
+name: GitHub Notifier
+description: "Notify repositories using repository dispatch events via a GitHub App"
+branding:
+  icon: "rss"
+  color: purple
+inputs:
+  app_id:
+    description: "Your GitHub App's App ID"
+    required: true
+  private_key:
+    description: "Your GitHub Private Key"
+    required: true
+  event_type:
+    description: "The repository dispatch event type, see https://docs.github.com/en/rest/repos/repos#create-a-repository-dispatch-event"
+    required: true
+  event_payload:
+    description: "JSON string for the repository dispatch event client_payload"
+    required: true
+runs:
+  using: "node24"
+  main: "dist/main.cjs"
