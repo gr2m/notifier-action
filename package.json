@@ -1,7 +1,7 @@
 {
   "name": "notifier-action",
   "private": true,
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "description": "GitHub Action to notify repositories using repository dispatch events via a GitHub App",
   "type": "module",
   "scripts": {
